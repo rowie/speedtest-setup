@@ -61,10 +61,10 @@ Das Skript installiert alle Abhängigkeiten, richtet `msmtp` mit **Port 465 (SSL
 
 | Job | Zeit |
 |-----|------|
-| Speedtest messen | 06:00, 12:00, 18:00 Uhr |
+| Speedtest messen | 00:00, 06:00, 12:00, 18:00 Uhr |
 | Tagesbericht senden | 20:00 Uhr |
 
-> Anpassbar in der `.env` via `CRON_MEASURE_1/2/3` und `CRON_REPORT`
+> Anpassbar in der `.env` via `CRON_MEASURE_1/2/3/4` und `CRON_REPORT`
 
 ## Auf weiteren Hosts ausrollen
 
