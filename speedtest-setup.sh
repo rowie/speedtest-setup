@@ -99,9 +99,9 @@ if [ \$? -ne 0 ] || [ -z "\$RESULT" ]; then
     exit 1
 fi
 
-DOWNLOAD=\$(echo "\$RESULT" | jq -r '.download.bandwidth' | awk '{printf "%.1f", \$1/125000}')
-UPLOAD=\$(echo "\$RESULT" | jq -r '.upload.bandwidth' | awk '{printf "%.1f", \$1/125000}')
-PING=\$(echo "\$RESULT" | jq -r '.ping.latency' | awk '{printf "%.1f", \$1}')
+DOWNLOAD=\$(echo "\$RESULT" | jq -r '.download.bandwidth' | LC_ALL=C awk '{printf "%.1f", \$1/125000}')
+UPLOAD=\$(echo "\$RESULT" | jq -r '.upload.bandwidth' | LC_ALL=C awk '{printf "%.1f", \$1/125000}')
+PING=\$(echo "\$RESULT" | jq -r '.ping.latency' | LC_ALL=C awk '{printf "%.1f", \$1}')
 SERVER=\$(echo "\$RESULT" | jq -r '.server.name')
 
 if [ -z "\$DOWNLOAD" ] || [ "\$DOWNLOAD" = "null" ]; then
