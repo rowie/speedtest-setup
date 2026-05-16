@@ -90,4 +90,8 @@ ssh user@newhost "bash speedtest-setup.sh"
 - SMTP-Server: Dein eigener Mailserver (Port `465` SSL empfohlen)
 - Das Passwort wird in `~/.msmtprc` gespeichert (Berechtigungen: 600)
 - Die `.env` wird **nicht** ins Repository eingecheckt (`.gitignore`)
+- Hier noch eine Liste mit den Speedtest-Servern (https://bench.laset.com/servers.html)
+  Ihr könnt den Server selber wählen durch Eingabe der --server-id ID hinter dem speedtest befehl in der measure.sh datei in Zeile 14!
+
+zb.:    RESULT=$(speedtest --server-id 818 --accept-license --accept-gdpr -f json 2>/dev/null)
 
