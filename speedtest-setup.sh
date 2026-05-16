@@ -244,6 +244,7 @@ echo "⏰ Richte Cronjobs ein..."
 $CRON_MEASURE_1 $INSTALL_DIR/measure.sh >> $INSTALL_DIR/measure.log 2>&1
 $CRON_MEASURE_2 $INSTALL_DIR/measure.sh >> $INSTALL_DIR/measure.log 2>&1
 $CRON_MEASURE_3 $INSTALL_DIR/measure.sh >> $INSTALL_DIR/measure.log 2>&1
+$CRON_MEASURE_4 $INSTALL_DIR/measure.sh >> $INSTALL_DIR/measure.log 2>&1
 $CRON_REPORT    $INSTALL_DIR/report.sh  >> $INSTALL_DIR/report.log  2>&1
 CRON
 ) | crontab -
